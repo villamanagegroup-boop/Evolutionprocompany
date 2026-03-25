@@ -1,12 +1,9 @@
 import { NextRequest, NextResponse } from "next/server";
-import { Resend } from "resend";
+import { supabase } from "@/lib/supabase";
+import { transporter, ADMIN_EMAIL } from "@/lib/mailer";
 
 export async function POST(req: NextRequest) {
-  const ADMIN_EMAIL = process.env.ADMIN_EMAIL || "admin@evolutionproductionco.com";
-  const FROM_EMAIL = process.env.FROM_EMAIL || "EPC <noreply@evolutionproductionco.com>";
-
   try {
-    const resend = new Resend(process.env.RESEND_API_KEY);
     const body = await req.json();
     const { firstName, lastName, email, subject, message } = body;
 
@@ -14,54 +11,36 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
     }
 
-    await resend.emails.send({
-      from: FROM_EMAIL,
-      to: email,
-      subject: "We received your message — Evolution Production Company",
-      html: `
-        <!DOCTYPE html><html><head><style>
-          body{background:#0D0A14;color:#FFF8F0;font-family:sans-serif;margin:0;padding:0}
-          .c{max-width:560px;margin:0 auto;padding:40px 24px}
-          .h{background:linear-gradient(135deg,#7B2FBE,#C2185B,#E8334A);border-radius:12px;padding:32px;text-align:center;margin-bottom:32px}
-          .h h1{font-size:26px;letter-spacing:.1em;margin:0 0 6px;color:#FFF8F0}
-          .h p{color:rgba(255,248,240,.8);font-style:italic;margin:0;font-size:13px}
-          p{color:rgba(255,248,240,.7);line-height:1.6;font-size:15px}
-          .ft{margin-top:36px;text-align:center;color:rgba(255,248,240,.3);font-size:12px}
-        </style></head><body><div class="c">
-          <div class="h"><h1>EVOLUTION PRODUCTION COMPANY</h1><p>Message Received</p></div>
-          <p>Hi ${firstName},</p>
-          <p>We received your message regarding <strong>${subject}</strong>. Our team will be in touch as soon as possible.</p>
-          <p style="font-style:italic;color:rgba(255,248,240,.5)">"${message}"</p>
-          <div class="ft">&copy; ${new Date().getFullYear()} Evolution Production Company &bull; DMV Area</div>
-        </div></body></html>
-      `,
+    const { error } = await supabase.from("contact_messages").insert({
+      first_name: firstName,
+      last_name: lastName,
+      email,
+      subject,
+      message,
     });
 
-    await resend.emails.send({
-      from: FROM_EMAIL,
+    if (error) throw error;
+
+    await transporter.sendMail({
+      from: "EPC Website <evolutionprocompany@gmail.com>",
       to: ADMIN_EMAIL,
       subject: `Contact: ${subject} — ${firstName} ${lastName}`,
       html: `
-        <!DOCTYPE html><html><head><style>
-          body{background:#0D0A14;color:#FFF8F0;font-family:sans-serif;margin:0;padding:0}
-          .c{max-width:560px;margin:0 auto;padding:32px 24px}
-          h2{color:#F5C842;font-size:20px;margin:0 0 20px}
-          .row{display:flex;gap:12px;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.08)}
-          .lbl{color:rgba(255,248,240,.4);font-size:12px;text-transform:uppercase;letter-spacing:.1em;min-width:90px;flex-shrink:0}
-          .val{color:#FFF8F0;font-size:14px;flex:1}
-        </style></head><body><div class="c">
-          <h2>New Contact Message</h2>
-          <div class="row"><span class="lbl">Name</span><span class="val">${firstName} ${lastName}</span></div>
-          <div class="row"><span class="lbl">Email</span><span class="val">${email}</span></div>
-          <div class="row"><span class="lbl">Subject</span><span class="val">${subject}</span></div>
-          <div class="row"><span class="lbl">Message</span><span class="val">${message}</span></div>
-        </div></body></html>
+        <div style="font-family:sans-serif;max-width:560px;margin:0 auto;padding:32px;background:#0D0A14;color:#FFF8F0;border-radius:12px;">
+          <h2 style="color:#F5C842;margin:0 0 20px;">New Contact Message</h2>
+          <table style="width:100%;border-collapse:collapse;">
+            <tr><td style="padding:10px 0;border-bottom:1px solid rgba(255,255,255,.08);color:rgba(255,248,240,.4);font-size:12px;text-transform:uppercase;letter-spacing:.1em;width:130px;">Name</td><td style="padding:10px 0;border-bottom:1px solid rgba(255,255,255,.08);font-size:14px;">${firstName} ${lastName}</td></tr>
+            <tr><td style="padding:10px 0;border-bottom:1px solid rgba(255,255,255,.08);color:rgba(255,248,240,.4);font-size:12px;text-transform:uppercase;letter-spacing:.1em;">Email</td><td style="padding:10px 0;border-bottom:1px solid rgba(255,255,255,.08);font-size:14px;">${email}</td></tr>
+            <tr><td style="padding:10px 0;border-bottom:1px solid rgba(255,255,255,.08);color:rgba(255,248,240,.4);font-size:12px;text-transform:uppercase;letter-spacing:.1em;">Subject</td><td style="padding:10px 0;border-bottom:1px solid rgba(255,255,255,.08);font-size:14px;">${subject}</td></tr>
+            <tr><td style="padding:10px 0;color:rgba(255,248,240,.4);font-size:12px;text-transform:uppercase;letter-spacing:.1em;">Message</td><td style="padding:10px 0;font-size:14px;">${message}</td></tr>
+          </table>
+        </div>
       `,
     });
 
     return NextResponse.json({ success: true });
   } catch (error) {
     console.error("Contact error:", error);
-    return NextResponse.json({ error: "Failed to send. Please try again." }, { status: 500 });
+    return NextResponse.json({ error: "Failed to submit. Please try again." }, { status: 500 });
   }
 }
