@@ -9,8 +9,20 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        purple: "#7B2FBE",
+        magenta: "#C2185B",
+        red: "#E8334A",
+        gold: "#F5C842",
+        dark: "#0D0A14",
+        cream: "#FFF8F0",
+      },
+      fontFamily: {
+        bebas: ["var(--font-bebas)", "sans-serif"],
+        cormorant: ["var(--font-cormorant)", "serif"],
+        dm: ["var(--font-dm)", "sans-serif"],
+      },
+      backgroundImage: {
+        "brand-gradient": "linear-gradient(135deg, #7B2FBE, #C2185B, #E8334A)",
       },
     },
   },

@@ -3,25 +3,59 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --purple: #7B2FBE;
+  --magenta: #C2185B;
+  --red: #E8334A;
+  --gold: #F5C842;
+  --dark: #0D0A14;
+  --cream: #FFF8F0;
+  --gradient: linear-gradient(135deg, #7B2FBE, #C2185B, #E8334A);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--dark);
+  color: var(--cream);
+  font-family: var(--font-dm), sans-serif;
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  .text-gradient {
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
+
+  .bg-gradient-brand {
+    background: var(--gradient);
+  }
+
+  .border-gradient {
+    border-image: var(--gradient) 1;
+  }
+
+  .font-bebas {
+    font-family: var(--font-bebas), sans-serif;
+    letter-spacing: 0.05em;
+  }
+
+  .font-cormorant {
+    font-family: var(--font-cormorant), serif;
+  }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--dark);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--purple);
+  border-radius: 3px;
 }
