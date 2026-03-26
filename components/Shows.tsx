@@ -27,7 +27,7 @@ function FadeUp({
 }
 
 const SHOW_IMAGES = [
-  "https://images.unsplash.com/photo-1516687401797-25297ff1462c?w=800&q=80",
+  "/spring-show.png",
   "https://images.unsplash.com/photo-1508807526345-15e9b5f4eaff?w=800&q=80",
   "https://images.unsplash.com/photo-1547153760-18fc86324498?w=800&q=80",
 ];
