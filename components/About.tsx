@@ -76,7 +76,7 @@ export default function About() {
           <FadeUp delay={0.2}>
             <div className="relative h-[520px] rounded-2xl overflow-hidden">
               <Image
-                src="/skater.jpg"
+                src="/our-story.png"
                 alt="Figure skater performing on stage"
                 fill
                 className="object-cover"
