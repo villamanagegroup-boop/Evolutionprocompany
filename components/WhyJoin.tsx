@@ -137,8 +137,8 @@ export default function WhyJoin() {
           <FadeUp delay={0.2}>
             <div className="relative h-[520px] md:h-[620px] rounded-2xl overflow-hidden md:sticky md:top-24">
               <Image
-                src="https://images.unsplash.com/photo-1508807526345-15e9b5f4eaff?w=800&q=80"
-                alt="EPC performers on stage"
+                src="/the-difference.png"
+                alt="Dancer with smoke"
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 50vw"
