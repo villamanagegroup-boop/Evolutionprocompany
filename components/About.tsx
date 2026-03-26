@@ -109,8 +109,8 @@ export default function About() {
           <div className="grid grid-cols-3 gap-3 md:gap-4">
             {[
               {
-                src: "https://images.unsplash.com/photo-1516687401797-25297ff1462c?w=600&q=80",
-                alt: "Dancer performing on stage",
+                src: "/spring-show.png",
+                alt: "Figure skater performing on ice",
               },
               {
                 src: "https://images.unsplash.com/photo-1508807526345-15e9b5f4eaff?w=600&q=80",
