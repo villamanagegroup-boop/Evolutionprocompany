@@ -113,8 +113,8 @@ export default function About() {
                 alt: "Figure skater performing on ice",
               },
               {
-                src: "https://images.unsplash.com/photo-1508807526345-15e9b5f4eaff?w=600&q=80",
-                alt: "Contemporary dance performance",
+                src: "/our-story-2.png",
+                alt: "Dancer performing on stage",
               },
               {
                 src: "https://images.unsplash.com/photo-1547153760-18fc86324498?w=600&q=80",
