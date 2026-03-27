@@ -90,21 +90,21 @@ export const MEMBERSHIP_TIERS = [
 export const WHY_JOIN = [
   {
     icon: "💰",
-    title: "Paid Opportunities",
+    title: "Paid Performance Opportunities",
     description:
-      "Senior Company members (12+) earn cash payouts per show plus a 25% net profit share at year-end — split 40% base / 60% performance-based. This is a career, not a hobby.",
+      "Senior Company performers (12+) may be selected for paid performance opportunities through EPC productions, special events, and company projects. EPC is designed to create real-world performance experiences for artists who are ready to take their craft seriously.",
   },
   {
     icon: "🎓",
     title: "Professional Development",
     description:
-      "Train under industry professionals across choreography, conditioning, acting, flexibility, and technique. Every track — Flex, Junior, Senior — is built for growth.",
+      "Train with experienced choreographers and industry professionals in choreography, performance quality, conditioning, flexibility, and technique. Each division — Flex, Junior, and Senior — is structured to support growth, confidence, and stage-ready performance skills.",
   },
   {
     icon: "🌟",
-    title: "Talent Management",
+    title: "Talent Pathways",
     description:
-      "Top performers enter EPC's talent pipeline — connecting them with NIL agents, casting directors, and professional touring opportunities at the regional and national level.",
+      "Outstanding performers may be introduced to EPC's broader talent network, connecting them with casting opportunities, touring productions, and industry professionals. EPC is committed to helping performers grow both on stage and beyond the company.",
   },
 ];
 
