@@ -106,17 +106,14 @@ export default function PartnershipsPage() {
             {RINK_PARTNER_BENEFITS.map((benefit) => (
               <div
                 key={benefit.title}
-                className="flex gap-4 p-6 rounded-2xl border border-white/10 bg-white/5 hover:border-purple/30 transition-all duration-200 h-full"
+                className="p-6 rounded-2xl border border-white/10 bg-white/5 hover:border-purple/30 transition-all duration-200 h-full"
               >
-                <div className="text-3xl flex-shrink-0">{benefit.icon}</div>
-                <div>
-                  <h4 className="font-bebas text-lg text-cream tracking-widest mb-1">
-                    {benefit.title}
-                  </h4>
-                  <p className="font-dm text-cream/60 text-xs leading-relaxed">
-                    {benefit.description}
-                  </p>
-                </div>
+                <h4 className="font-bebas text-lg text-cream tracking-widest mb-1">
+                  {benefit.title}
+                </h4>
+                <p className="font-dm text-cream/60 text-xs leading-relaxed">
+                  {benefit.description}
+                </p>
               </div>
             ))}
           </div>
@@ -205,7 +202,6 @@ export default function PartnershipsPage() {
                 key={type.title}
                 className="p-6 rounded-2xl border border-white/10 bg-white/5 hover:border-white/20 transition-all duration-200"
               >
-                <div className="text-3xl mb-3">{type.icon}</div>
                 <div
                   className="inline-block h-0.5 w-8 rounded-full mb-3"
                   style={{ background: type.color }}
