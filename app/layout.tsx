@@ -24,6 +24,7 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
+  icons: { icon: "/logo-circle.png" },
   title: "Evolution Production Company | Where Ice Meets Dance",
   description:
     "Evolution Production Company (EPC) is a hybrid touring ice and dance performance company based in the DMV area. Professional training, three productions per year, and real career opportunities.",
