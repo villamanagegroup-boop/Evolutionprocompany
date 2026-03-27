@@ -7,6 +7,7 @@ import WhyJoin from "@/components/WhyJoin";
 import Partners from "@/components/Partners";
 import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
+import Image from "next/image";
 
 function QuoteDivider() {
   return (
@@ -31,6 +32,20 @@ export default function Home() {
       <QuoteDivider />
       <Shows />
       <Auditions />
+
+      {/* Auditions flyer */}
+      <section className="py-16 border-t border-white/10">
+        <div className="max-w-lg mx-auto px-4 sm:px-6 lg:px-8 flex justify-center">
+          <Image
+            src="/auditions-flyer.png"
+            alt="EPC Founding Company Auditions Flyer"
+            width={600}
+            height={800}
+            className="w-full rounded-2xl shadow-[0_0_60px_rgba(123,47,190,0.25)]"
+          />
+        </div>
+      </section>
+
       <WhyJoin />
       <Partners />
       <ContactForm />

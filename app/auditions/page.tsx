@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import ContactForm from "@/components/ContactForm";
 import { AUDITION_TIERS, FAQ } from "@/lib/constants";
 import FaqAccordion from "@/components/FaqAccordion";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Auditions | Evolution Production Company",
@@ -33,6 +34,19 @@ export default function AuditionsPage() {
             roster. Auditions are by invitation after interest registration.
             This is not a tryout — it&apos;s the start of a career.
           </p>
+        </div>
+      </section>
+
+      {/* Auditions flyer */}
+      <section className="py-4 pb-16">
+        <div className="max-w-lg mx-auto px-4 sm:px-6 lg:px-8 flex justify-center">
+          <Image
+            src="/auditions-flyer.png"
+            alt="EPC Founding Company Auditions Flyer"
+            width={600}
+            height={800}
+            className="w-full rounded-2xl shadow-[0_0_60px_rgba(123,47,190,0.25)]"
+          />
         </div>
       </section>
 
