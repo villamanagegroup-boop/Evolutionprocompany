@@ -106,8 +106,14 @@ export default function ContactPage() {
 
               <div className="space-y-5">
                 <div>
-                  <p className="text-xs font-dm text-cream/40 tracking-widest uppercase mb-1">Based In</p>
-                  <p className="font-dm text-cream/80 text-sm">DMV Area (DC / MD / VA)</p>
+                  <p className="text-xs font-dm text-cream/40 tracking-widest uppercase mb-1">Email</p>
+                  <a href="mailto:info@epcperform.com" className="font-dm text-gold text-sm hover:underline">
+                    info@epcperform.com
+                  </a>
+                </div>
+                <div>
+                  <p className="text-xs font-dm text-cream/40 tracking-widest uppercase mb-1">Headquartered</p>
+                  <p className="font-dm text-cream/80 text-sm">Washington DC &amp; Surrounding Areas, USA</p>
                 </div>
                 <div>
                   <p className="text-xs font-dm text-cream/40 tracking-widest uppercase mb-1">Response Time</p>

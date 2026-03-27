@@ -63,6 +63,13 @@ export default function Footer() {
           <p className="font-dm text-cream/30 text-xs">
             &copy; {new Date().getFullYear()} Evolution Production Company. All rights reserved.
           </p>
+          <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-6">
+            <a href="mailto:info@epcperform.com" className="font-dm text-cream/40 text-xs hover:text-gold transition-colors duration-200">
+              info@epcperform.com
+            </a>
+            <span className="hidden sm:block text-cream/20 text-xs">·</span>
+            <p className="font-dm text-cream/30 text-xs">Washington DC &amp; Surrounding Areas, USA</p>
+          </div>
           <p className="font-cormorant italic text-cream/30 text-sm">
             Where Ice Meets Dance. Where Art Becomes Legend.
           </p>
