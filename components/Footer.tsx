@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const navLinks = [
   { label: "About", href: "/about" },
-  { label: "Shows", href: "/#shows" },
+  { label: "Shows", href: "/shows" },
   { label: "Auditions", href: "/auditions" },
   { label: "Company", href: "/company" },
   { label: "Partnerships", href: "/partnerships" },
@@ -18,13 +18,15 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center gap-8">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3">
-            <Image
-              src="/logo.png"
-              alt="Evolution Production Company"
-              width={120}
-              height={120}
-              className="h-14 w-auto object-contain"
-            />
+            <div className="rounded-full p-[2px] flex-shrink-0" style={{ background: "linear-gradient(135deg, #7B2FBE, #C2185B, #E8334A)" }}>
+              <Image
+                src="/logo-circle.png"
+                alt="Evolution Production Company"
+                width={52}
+                height={52}
+                className="h-13 w-13 rounded-full object-cover"
+              />
+            </div>
             <div>
               <div className="font-bebas text-xl text-cream tracking-widest leading-none">
                 Evolution

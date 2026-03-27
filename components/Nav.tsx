@@ -41,14 +41,16 @@ export default function Nav() {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
-            <Image
-              src="/logo.png"
-              alt="Evolution Production Company"
-              width={120}
-              height={120}
-              className="h-12 w-auto object-contain"
-              priority
-            />
+            <div className="rounded-full p-[2px] flex-shrink-0" style={{ background: "linear-gradient(135deg, #7B2FBE, #C2185B, #E8334A)" }}>
+              <Image
+                src="/logo-circle.png"
+                alt="Evolution Production Company"
+                width={48}
+                height={48}
+                className="h-12 w-12 rounded-full object-cover"
+                priority
+              />
+            </div>
             <div className="hidden sm:block">
               <div className="font-bebas text-xl text-cream tracking-widest leading-none">
                 Evolution
