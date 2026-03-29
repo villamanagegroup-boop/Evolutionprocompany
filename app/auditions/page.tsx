@@ -127,6 +127,11 @@ export default function AuditionsPage() {
                     title: "Mindset",
                     body: "We are looking for coachability, stage presence, and commitment — not perfection. Come ready to take direction.",
                   },
+                  {
+                    step: "05",
+                    title: "Video Auditions",
+                    body: "Can't make it in person? Performers may submit a video audition. Film your solo in a well-lit space with clear audio. Video submissions are reviewed on a rolling basis — contact us for submission details.",
+                  },
                 ].map((item) => (
                   <div key={item.step} className="flex gap-4">
                     <div className="font-bebas text-3xl text-gradient leading-none pt-1 min-w-[2rem]">

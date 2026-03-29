@@ -64,15 +64,15 @@ export default function Membership() {
                 <h3 className="font-bebas text-3xl text-cream tracking-widest mb-1">
                   {tier.name}
                 </h3>
-                <div
-                  className={`font-bebas text-5xl mb-2 ${tier.featured ? "text-gold" : "text-gradient"}`}
-                >
-                  {tier.price}
-                </div>
                 <p
-                  className={`font-dm text-sm mb-6 ${tier.featured ? "text-cream/80" : "text-cream/60"}`}
+                  className={`font-dm text-sm mb-4 ${tier.featured ? "text-cream/80" : "text-cream/60"}`}
                 >
                   {tier.description}
+                </p>
+                <p
+                  className={`font-dm text-xs italic mb-6 ${tier.featured ? "text-gold/80" : "text-cream/40"}`}
+                >
+                  Members will receive full transparent payment information during the audition process.
                 </p>
 
                 <ul className="space-y-3 mb-8 flex-1">
@@ -103,7 +103,13 @@ export default function Membership() {
         </div>
 
         <FadeUp delay={0.3}>
-          <p className="mt-8 text-center font-dm text-cream/40 text-xs tracking-wide">
+          <div className="mt-10 p-6 rounded-2xl bg-gradient-to-r from-purple/30 via-magenta/30 to-red/30 border border-white/15 text-center">
+            <p className="font-dm text-cream text-sm leading-relaxed">
+              <span className="font-semibold text-gold">Memberships range between $175–$250 per month</span>{" "}
+              depending on the division and participation level. Full details are shared during the audition process.
+            </p>
+          </div>
+          <p className="mt-4 text-center font-dm text-cream/40 text-xs tracking-wide">
             All casting decisions are strictly audition-based. Membership tier does not
             affect role assignment. Principal and corporate spots are earned on the floor.
           </p>
