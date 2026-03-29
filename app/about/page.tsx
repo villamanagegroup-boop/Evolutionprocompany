@@ -163,6 +163,31 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* As EPC Grows */}
+      <section className="py-20 border-t border-white/10">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <p className="font-cormorant italic text-gold text-lg tracking-widest mb-4">
+            Looking Ahead
+          </p>
+          <h2 className="font-bebas text-4xl md:text-5xl text-cream tracking-widest mb-6">
+            AS EPC <span className="text-gradient">GROWS</span>
+          </h2>
+          <p className="font-dm text-cream/65 text-base leading-relaxed mb-8">
+            As Evolution Production Company continues to grow, members may also gain access to expanded
+            experiences such as special trips, industry events, company retreats, exclusive workshops,
+            and unique performance opportunities. Our goal is to build a company experience that is
+            inspiring, professional, and rewarding at every level.
+          </p>
+          <div className="flex flex-wrap justify-center gap-3">
+            {["Special Trips", "Industry Events", "Company Retreats", "Exclusive Workshops", "Unique Performance Opportunities"].map((item) => (
+              <span key={item} className="px-4 py-2 rounded-full border border-white/15 bg-white/5 font-dm text-cream/60 text-sm">
+                {item}
+              </span>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <Footer />
     </main>
   );

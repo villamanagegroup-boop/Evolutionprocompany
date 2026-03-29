@@ -13,42 +13,36 @@ export const metadata: Metadata = {
 
 const additionalPartnerTypes = [
   {
-    icon: "📺",
     title: "Media Partners",
     description:
       "Local TV stations, digital media outlets, lifestyle brands, and content creators who want early access to EPC productions, rehearsals, and artist stories. In return: logo placement, press access, and co-branded content.",
     color: "#7B2FBE",
   },
   {
-    icon: "🏫",
     title: "School & Youth Program Partners",
     description:
       "After-school programs, performing arts schools, and youth organizations that want to pipeline young talent into structured professional training. EPC can serve as the performance destination for your students.",
     color: "#C2185B",
   },
   {
-    icon: "🏨",
     title: "Hospitality Partners",
     description:
       "Hotels, restaurants, and entertainment venues near EPC production locations. Package deals, cross-promotion, and audience capture for businesses that benefit when EPC fills a house.",
     color: "#E8334A",
   },
   {
-    icon: "👗",
     title: "Apparel & Merchandise Partners",
     description:
       "Brands interested in co-designing company apparel, production merchandise, or performance gear. Your product in front of live audiences — worn by the talent on and off the ice.",
     color: "#7B2FBE",
   },
   {
-    icon: "💻",
     title: "Technology & Platform Partners",
     description:
       "Ticketing platforms, streaming services, production tech companies, and digital tools that want to power EPC's growth. Early-stage technology partners grow their footprint as EPC scales nationally.",
     color: "#C2185B",
   },
   {
-    icon: "🌍",
     title: "Community Organization Partners",
     description:
       "DMV arts nonprofits, cultural organizations, and community groups aligned with performing arts, youth development, or diversity in entertainment. Joint programming, shared audiences, and mission-aligned impact.",

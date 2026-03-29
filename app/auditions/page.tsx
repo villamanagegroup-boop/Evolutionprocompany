@@ -50,6 +50,44 @@ export default function AuditionsPage() {
         </div>
       </section>
 
+      {/* Who EPC Is For */}
+      <section className="py-16 border-t border-white/10">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <p className="font-cormorant italic text-gold text-lg tracking-widest mb-4">
+                Is EPC Right for You?
+              </p>
+              <h2 className="font-bebas text-4xl md:text-5xl text-cream tracking-widest mb-6">
+                WHO EPC <span className="text-gradient">IS FOR</span>
+              </h2>
+              <p className="font-dm text-cream/65 text-base leading-relaxed">
+                EPC is for performers who are excited about creativity, collaboration, and live performance.
+                Our company is a great fit for skaters, dancers, and artists who want to be part of original
+                productions while continuing to grow in their primary training environments. We welcome
+                performers who are passionate, team-oriented, open to learning, and excited to contribute
+                to a positive company culture.
+              </p>
+            </div>
+            <div className="space-y-3">
+              {[
+                "Skaters and dancers at any experience level",
+                "Performers who want more stage time",
+                "Artists looking for original, creative productions",
+                "Those who value community and collaboration",
+                "Performers committed to growth and professionalism",
+                "Anyone who wants to be part of something new",
+              ].map((item) => (
+                <div key={item} className="flex items-start gap-3 p-4 rounded-xl border border-white/10 bg-white/5">
+                  <span className="text-gold font-bebas text-lg leading-none mt-0.5">→</span>
+                  <p className="font-dm text-cream/70 text-sm">{item}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Eligibility */}
       <section className="py-20 border-t border-white/10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -110,7 +148,7 @@ export default function AuditionsPage() {
                   {
                     step: "01",
                     title: "Solo Performance",
-                    body: "Prepare a solo in your primary discipline. Juniors: 60 seconds. Seniors: 90 seconds. Bring your best — not your safest.",
+                    body: "A solo is required only for performers seeking principal role consideration. Juniors: 60 seconds. Seniors: 90 seconds. All other performers do not need to prepare a solo — bring your current skill level and readiness.",
                   },
                   {
                     step: "02",
@@ -130,7 +168,7 @@ export default function AuditionsPage() {
                   {
                     step: "05",
                     title: "Video Auditions",
-                    body: "Can't make it in person? Performers may submit a video audition. Film your solo in a well-lit space with clear audio. Video submissions are reviewed on a rolling basis — contact us for submission details.",
+                    body: "Can't make it in person? Performers may submit a video audition. If submitting for principal consideration, include your solo. Film in a well-lit space with clear audio. Video submissions are reviewed on a rolling basis — contact us for submission details.",
                   },
                 ].map((item) => (
                   <div key={item.step} className="flex gap-4">

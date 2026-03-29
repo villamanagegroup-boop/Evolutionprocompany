@@ -36,11 +36,10 @@ export default function Membership() {
               Investment
             </p>
             <h2 className="font-bebas text-5xl md:text-6xl text-cream tracking-widest">
-              MEMBERSHIP <span className="text-gradient">TIERS</span>
+              MEMBERSHIP <span className="text-gradient">OPTIONS</span>
             </h2>
             <p className="mt-4 font-dm text-cream/60 text-base max-w-xl mx-auto">
-              One membership fee. Two levels of access. Every tier includes full
-              production participation — casting is strictly audition-based.
+              Choose the membership path that best fits your goals, experience, and level of involvement within the company.
             </p>
           </div>
         </FadeUp>
@@ -57,7 +56,7 @@ export default function Membership() {
               >
                 {tier.featured && (
                   <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-gold text-dark text-xs font-dm font-bold rounded-full tracking-widest uppercase">
-                    Most Popular
+                    Optional Upgrade
                   </div>
                 )}
 
@@ -75,7 +74,7 @@ export default function Membership() {
                   Members will receive full transparent payment information during the audition process.
                 </p>
 
-                <ul className="space-y-3 mb-8 flex-1">
+                <ul className="space-y-3 mb-6 flex-1">
                   {tier.features.map((feature) => (
                     <li
                       key={feature}
@@ -86,6 +85,12 @@ export default function Membership() {
                     </li>
                   ))}
                 </ul>
+
+                {"castingNote" in tier && tier.castingNote && (
+                  <p className="font-dm text-xs text-cream/50 italic mb-6 leading-relaxed border-t border-white/15 pt-4">
+                    {tier.castingNote as string}
+                  </p>
+                )}
 
                 <Link
                   href="/auditions#register"

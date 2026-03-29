@@ -82,9 +82,14 @@ export default function Footer() {
               </svg>
             </a>
           </div>
-          <p className="font-cormorant italic text-cream/30 text-sm">
-            Where Ice Meets Dance. Where Art Becomes Legend.
-          </p>
+          <div className="text-center">
+            <p className="font-cormorant italic text-cream/30 text-sm">
+              Where Ice Meets Dance. Where Art Becomes Legend.
+            </p>
+            <p className="font-dm text-cream/20 text-xs mt-1 tracking-wide">
+              A <span className="text-cream/35">Hicks Virtual Solutions</span> Company
+            </p>
+          </div>
         </div>
       </div>
     </footer>
