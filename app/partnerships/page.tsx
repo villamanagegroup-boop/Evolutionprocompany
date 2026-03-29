@@ -97,12 +97,16 @@ export default function PartnershipsPage() {
           </p>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-8">
-            {RINK_PARTNER_BENEFITS.map((benefit) => (
+            {RINK_PARTNER_BENEFITS.map((benefit, i) => (
               <div
                 key={benefit.title}
-                className="p-6 rounded-2xl border border-white/10 bg-white/5 hover:border-purple/30 transition-all duration-200 h-full"
+                className="p-6 rounded-2xl bg-[#13101c] hover:-translate-y-1 transition-all duration-200 h-full"
               >
-                <h4 className="font-bebas text-lg text-cream tracking-widest mb-1">
+                <div
+                  className="h-0.5 w-8 rounded-full mb-4"
+                  style={{ background: `linear-gradient(90deg, ${["#7B2FBE","#C2185B","#E8334A"][i % 3]}, ${["#7B2FBE","#C2185B","#E8334A"][i % 3]}00)` }}
+                />
+                <h4 className="font-bebas text-lg text-cream tracking-widest mb-2">
                   {benefit.title}
                 </h4>
                 <p className="font-dm text-cream/60 text-xs leading-relaxed">

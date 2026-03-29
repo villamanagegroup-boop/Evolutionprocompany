@@ -151,14 +151,14 @@ export const AUDITION_TIERS = [
       "Parent/guardian consent required",
       "Commitment to full training cycle",
     ],
-    payout: "Program credits toward future Senior Company transition",
+    payout: "Priority consideration for Senior Company auditions upon age or skill readiness",
     color: "#7B2FBE",
   },
   {
     name: "Senior Company",
     ages: "Ages 12+",
     description:
-      "The professional arm of EPC. Senior members commit to the full season, perform in all productions, and earn real compensation. Principal and corporate spots are earned through audition — all members perform.",
+      "The advanced level of EPC. Senior members commit to the full season, perform in all productions, and earn real compensation. Principal and corporate spots are earned through audition — all members perform.",
     requirements: [
       "Ages 12+ at time of audition",
       "Intermediate to advanced skill level preferred",
@@ -166,7 +166,7 @@ export const AUDITION_TIERS = [
       "Resume or performance history helpful, not required",
       "Full season commitment required",
     ],
-    payout: "Cash payout per show + 25% year-end net profit share",
+    payout: "Compensation per show performed and year-end net profit share",
     color: "#C2185B",
   },
   {
@@ -178,7 +178,7 @@ export const AUDITION_TIERS = [
       "Open to all ages and experience levels",
       "No solo required — bring your current skill level",
       "Parent/guardian consent required for minors",
-      "Commitment to weekly development sessions",
+      "Weekly development sessions building toward production readiness",
       "Performs in ensemble roles across all 3 productions",
     ],
     payout: "Development track — ensemble performer in all productions, principal-eligible as skills advance",
@@ -195,7 +195,7 @@ export const FAQ = [
   {
     question: "How many shows will I perform in?",
     answer:
-      "All company members (Junior and Senior) appear in all three annual productions. Everyone performs. Principal spots and corporate spots are earned through audition — but there is no bench.",
+      "All company members appear in productions. Performance opportunities are a core part of EPC — roles and casting vary based on track, production needs, and readiness. Principal and corporate spots are earned through the audition process.",
   },
   {
     question: "What is the Flex Track?",

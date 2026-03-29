@@ -47,11 +47,12 @@ export default function AboutPage() {
                 <p>
                   Evolution Production Company was created to answer a question
                   that had no good answer: where does a serious ice skater or
-                  dancer go when they outgrow local studios but aren&apos;t
-                  ready for Broadway or the Ice Capades?
+                  dancer go when they want more — more performance opportunities,
+                  more creative challenges, more community — while continuing to
+                  grow in the training environments that got them here?
                 </p>
                 <p>
-                  EPC fills that gap. A home for performers who are serious,
+                  EPC is that place. A home for performers who are serious,
                   committed, and hungry — regardless of where they are in their
                   journey. A place where the training is real, the productions
                   are professional, and the path forward is clear.
@@ -59,7 +60,7 @@ export default function AboutPage() {
                 <p>
                   We built EPC for the artists who have always known they were
                   meant to perform. We built it so they have somewhere worthy to
-                  land.
+                  grow.
                 </p>
               </div>
             </div>
@@ -83,7 +84,7 @@ export default function AboutPage() {
                   {[
                     "Excellence over comfort",
                     "Accountability to the craft",
-                    "Every member performs — no bench",
+                    "All members perform — roles are earned through the audition process",
                     "Growth is mandatory, ego is optional",
                     "The stage is earned, not given",
                   ].map((v) => (

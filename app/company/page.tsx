@@ -124,27 +124,27 @@ const curriculum = [
 
 const skaterSchedule = [
   {
-    session: "Session 1",
+    session: "On-Ice Session",
     focus: "Ice Training",
-    details: "On-ice choreography, technical elements, ensemble work, and crossover staging with dancers",
+    details: "Weekly on-ice session covering choreography, technical elements, ensemble work, and crossover staging with dancers",
   },
   {
-    session: "Session 2",
+    session: "Off-Ice Session",
     focus: "Off-Ice Training",
-    details: "Conditioning, acting, flexibility, and movement quality development",
+    details: "Weekly off-ice session covering conditioning, acting, flexibility, and movement quality development",
   },
 ];
 
 const dancerSchedule = [
   {
-    session: "Session 1",
+    session: "Studio Session",
     focus: "Dance Training",
-    details: "Choreography, staging, and performance work — plus dedicated time at rink-side for crossover rehearsals with the skating cast",
+    details: "Weekly studio session covering choreography, staging, and performance work in your primary discipline",
   },
   {
-    session: "Session 2",
-    focus: "Off-Ice Training",
-    details: "Conditioning, flexibility, acting, and technique — same intensity as skaters, different discipline focus",
+    session: "Ice Session",
+    focus: "Combined Choreography",
+    details: "Weekly ice session for combined performance choreography — dancers and skaters rehearse crossover sequences and full-company staging together",
   },
 ];
 
@@ -287,7 +287,7 @@ export default function CompanyPage() {
                 {[
                   "Full participation in all 3 annual productions",
                   "Dedicated Junior choreography roles",
-                  "Program credits toward Senior Company transition",
+                  "Priority consideration for Senior Company auditions upon readiness",
                   "Mentored by Senior Company members",
                   "Age-appropriate technique and conditioning",
                 ].map((item) => (
@@ -308,7 +308,7 @@ export default function CompanyPage() {
                 SENIOR COMPANY
               </h3>
               <p className="font-dm text-cream/70 text-sm leading-relaxed mb-5">
-                The professional arm of EPC. Senior members commit to the full
+                The advanced level of EPC. Senior members commit to the full
                 season, perform in all productions, and earn real compensation.
                 Principal and corporate spots are earned through audition.
               </p>
@@ -350,7 +350,7 @@ export default function CompanyPage() {
                 TRAINING <span className="text-gradient">SCHEDULE</span>
               </h2>
               <p className="font-dm text-cream/60 text-sm mb-8 leading-relaxed">
-                Every member trains twice per week throughout each 3-month production cycle.
+                All members train on a weekly schedule throughout each 3-month production cycle.
                 Skaters and dancers each have their own session structure — with intentional
                 overlap built in for the crossover performances that define every EPC show.
               </p>
@@ -482,17 +482,13 @@ export default function CompanyPage() {
             {EXPERIENCE_CATEGORIES.map((cat) => (
               <div
                 key={cat.title}
-                className="rounded-2xl p-6 bg-white/5 hover:-translate-y-1 transition-all duration-200"
-                style={{ border: `1px solid ${cat.color}40` }}
+                className="rounded-2xl p-6 bg-[#13101c] hover:-translate-y-1 transition-all duration-200"
               >
                 <div
-                  className="h-0.5 w-10 rounded-full mb-4"
+                  className="h-0.5 w-8 rounded-full mb-4"
                   style={{ background: `linear-gradient(90deg, ${cat.color}, ${cat.color}00)` }}
                 />
-                <h3
-                  className="font-bebas text-xl tracking-widest mb-4"
-                  style={{ color: cat.color }}
-                >
+                <h3 className="font-bebas text-xl text-cream tracking-widest mb-4">
                   {cat.title}
                 </h3>
                 <ul className="space-y-3">
