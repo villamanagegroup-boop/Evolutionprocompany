@@ -62,6 +62,6 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ success: true });
   } catch (error) {
     console.error("Partnership error:", error);
-    return NextResponse.json({ error: "Failed to submit. Please try again." }, { status: 500 });
+    return NextResponse.json({ error: "Failed to submit. Please try again or reach us at" }, { status: 500 });
   }
 }

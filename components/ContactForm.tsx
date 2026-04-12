@@ -45,7 +45,7 @@ export default function ContactForm() {
       setStatus("success");
     } catch (err: unknown) {
       setStatus("error");
-      setErrorMsg(err instanceof Error ? err.message : "Something went wrong. Please try again.");
+      setErrorMsg(err instanceof Error ? err.message : "Something went wrong. Please try again or reach us at");
     }
   };
 
@@ -227,7 +227,12 @@ export default function ContactForm() {
               </div>
 
               {status === "error" && (
-                <p className="text-red text-sm font-dm">{errorMsg}</p>
+                <p className="text-red text-sm font-dm">
+                  {errorMsg}{" "}
+                  <a href="mailto:info@epcperform.com" className="underline underline-offset-2">
+                    info@epcperform.com
+                  </a>
+                </p>
               )}
 
               <button
