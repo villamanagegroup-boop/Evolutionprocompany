@@ -106,7 +106,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <p className="font-cormorant italic text-gold text-lg md:text-xl tracking-widest mb-4 opacity-80">
-            DMV&apos;s Premier Ice & Dance Performance Company
+            Washington DC Area&apos;s Premier Ice & Dance Performance Company
           </p>
         </motion.div>
 

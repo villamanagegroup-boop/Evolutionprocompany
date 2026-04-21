@@ -168,7 +168,7 @@ export default function CompanyPage() {
             <p className="font-cormorant italic text-gold text-lg tracking-widest mb-4">
               Inside EPC
             </p>
-            <h1 className="font-bebas text-7xl md:text-[100px] text-cream tracking-widest leading-none mb-6">
+            <h1 className="font-bebas text-5xl sm:text-6xl md:text-7xl lg:text-[100px] text-cream tracking-widest leading-none mb-6">
               THE <span className="text-gradient">COMPANY</span>
             </h1>
             <p className="font-dm text-cream/70 text-lg leading-relaxed max-w-2xl mb-6">
@@ -207,20 +207,9 @@ export default function CompanyPage() {
                 across disciplines.
               </p>
             </div>
-            <div className="space-y-4">
-              {[
-                { num: "01", label: "Studio & Club Friendly", body: "EPC works around your existing training schedule, not against it." },
-                { num: "02", label: "Cross-Discipline Community", body: "Skaters, dancers, and performers from every background training together." },
-                { num: "03", label: "Performance-First", body: "Original productions that give members real stage experience beyond competitions and recitals." },
-              ].map((item) => (
-                <div key={item.label} className="flex gap-4 p-5 rounded-xl border border-white/10 bg-white/5">
-                  <span className="font-bebas text-2xl text-gradient leading-none pt-0.5 flex-shrink-0">{item.num}</span>
-                  <div>
-                    <p className="font-bebas text-lg text-cream tracking-widest mb-1">{item.label}</p>
-                    <p className="font-dm text-cream/55 text-sm leading-relaxed">{item.body}</p>
-                  </div>
-                </div>
-              ))}
+            <div className="space-y-4 font-dm text-cream/60 text-base leading-relaxed">
+              <p>EPC works around your existing training schedule — not against it. Studio and club commitments come first.</p>
+              <p>Skaters, dancers, and performers from every background train together. The strongest artists grow through diverse experiences and real stage time beyond competitions and recitals.</p>
             </div>
           </div>
         </div>
@@ -355,50 +344,12 @@ export default function CompanyPage() {
                 overlap built in for the crossover performances that define every EPC show.
               </p>
 
-              {/* Skaters */}
-              <div className="mb-6">
-                <div className="flex items-center gap-2 mb-3">
-                  <span className="w-2 h-2 rounded-full bg-purple inline-block" />
-                  <h3 className="font-bebas text-xl text-cream tracking-widest">SKATERS</h3>
-                </div>
-                <div className="space-y-3">
-                  {skaterSchedule.map((s) => (
-                    <div key={s.session} className="p-4 rounded-xl border border-purple/20 bg-purple/5">
-                      <div className="flex items-center justify-between mb-1">
-                        <span className="font-bebas text-lg text-cream tracking-widest">{s.session}</span>
-                        <span className="text-xs font-dm font-semibold text-purple tracking-widest uppercase">{s.focus}</span>
-                      </div>
-                      <p className="font-dm text-cream/60 text-sm">{s.details}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Dancers */}
-              <div className="mb-6">
-                <div className="flex items-center gap-2 mb-3">
-                  <span className="w-2 h-2 rounded-full bg-magenta inline-block" />
-                  <h3 className="font-bebas text-xl text-cream tracking-widest">DANCERS</h3>
-                </div>
-                <div className="space-y-3">
-                  {dancerSchedule.map((s) => (
-                    <div key={s.session} className="p-4 rounded-xl border border-magenta/20 bg-magenta/5">
-                      <div className="flex items-center justify-between mb-1">
-                        <span className="font-bebas text-lg text-cream tracking-widest">{s.session}</span>
-                        <span className="text-xs font-dm font-semibold text-magenta tracking-widest uppercase">{s.focus}</span>
-                      </div>
-                      <p className="font-dm text-cream/60 text-sm">{s.details}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Crossover note */}
-              <div className="p-4 rounded-xl border border-gold/20 bg-gold/5">
-                <p className="font-dm text-cream/70 text-sm leading-relaxed">
-                  <span className="font-semibold text-gold">Crossover Note:</span> EPC productions feature skaters and dancers performing together on and around the ice. Dancers will regularly join ice sessions for joint staging, timing work, and full-company run-throughs — so that every crossover moment lands exactly right on show night.
-                </p>
-              </div>
+              <p className="font-dm text-cream/65 text-sm leading-relaxed">
+                Both skaters and dancers train on-ice and off-ice each week — sessions fall on the same day so the full company trains together. Specific scheduling is shared with members at the start of each production cycle.
+              </p>
+              <p className="font-dm text-cream/45 text-sm leading-relaxed mt-3">
+                <span className="text-gold font-semibold">Crossover:</span> Skaters and dancers share ice sessions for joint staging and full-company run-throughs — every crossover moment is rehearsed together, not pieced together at showtime.
+              </p>
 
               <div className="mt-8">
                 <h3 className="font-bebas text-2xl text-cream tracking-widest mb-4">
@@ -430,23 +381,11 @@ export default function CompanyPage() {
               <h2 className="font-bebas text-4xl text-cream tracking-widest mb-8">
                 CURRICULUM <span className="text-gradient">BREAKDOWN</span>
               </h2>
-              <div className="space-y-4">
-                {curriculum.map((item, i) => (
-                  <div
-                    key={item.name}
-                    className="p-5 rounded-xl border border-white/10 bg-white/5 hover:border-gold/30 transition-all duration-200"
-                  >
-                    <div className="flex items-center gap-3 mb-2">
-                      <span className="font-bebas text-gold text-lg leading-none">
-                        0{i + 1}
-                      </span>
-                      <h4 className="font-bebas text-xl text-cream tracking-widest">
-                        {item.name}
-                      </h4>
-                    </div>
-                    <p className="font-dm text-cream/60 text-sm leading-relaxed">
-                      {item.description}
-                    </p>
+              <div className="space-y-5">
+                {curriculum.map((item) => (
+                  <div key={item.name}>
+                    <h4 className="font-bebas text-lg text-cream tracking-widest mb-1">{item.name}</h4>
+                    <p className="font-dm text-cream/60 text-sm leading-relaxed">{item.description}</p>
                   </div>
                 ))}
               </div>
@@ -471,35 +410,19 @@ export default function CompanyPage() {
             </h2>
           </div>
 
-          <p className="font-dm text-cream/65 text-base leading-relaxed text-center max-w-3xl mx-auto mb-14">
-            At Evolution Production Company, membership is about more than rehearsals. We are building a company
-            experience that gives performers opportunities to grow, connect, create, and be inspired. From bonding
-            events to professional development, our members are part of a performance community designed to feel
-            exciting, supportive, and memorable.
+          <p className="font-dm text-cream/65 text-base leading-relaxed text-center max-w-3xl mx-auto mb-10">
+            Membership is about more than rehearsals. EPC builds a full company experience — from production nights and creative retreats to career development and team outings. Full details are shared when you join the company.
           </p>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="flex flex-wrap justify-center gap-3 max-w-3xl mx-auto">
             {EXPERIENCE_CATEGORIES.map((cat) => (
-              <div
+              <span
                 key={cat.title}
-                className="rounded-2xl p-6 bg-[#13101c] hover:-translate-y-1 transition-all duration-200"
+                className="px-4 py-2 rounded-full text-sm font-dm font-medium border border-white/10 text-cream/70"
+                style={{ borderColor: cat.color + "40", color: cat.color }}
               >
-                <div
-                  className="h-0.5 w-8 rounded-full mb-4"
-                  style={{ background: `linear-gradient(90deg, ${cat.color}, ${cat.color}00)` }}
-                />
-                <h3 className="font-bebas text-xl text-cream tracking-widest mb-4">
-                  {cat.title}
-                </h3>
-                <ul className="space-y-3">
-                  {cat.items.map((item) => (
-                    <li key={item} className="flex items-start gap-2 font-dm text-cream/65 text-xs leading-relaxed">
-                      <span className="mt-1 flex-shrink-0 w-1 h-1 rounded-full" style={{ backgroundColor: cat.color }} />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
+                {cat.title}
+              </span>
             ))}
           </div>
         </div>

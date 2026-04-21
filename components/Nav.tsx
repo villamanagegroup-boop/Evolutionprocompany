@@ -4,9 +4,9 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { usePathname } from "next/navigation";
 
 const links = [
-  { label: "Home", href: "/" },
   { label: "About", href: "/about" },
   { label: "Shows", href: "/shows" },
   { label: "Events", href: "/events" },
@@ -20,12 +20,16 @@ const links = [
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  const isActive = (href: string) =>
+    href === "/" ? pathname === "/" : pathname.startsWith(href);
 
   return (
     <motion.nav
@@ -53,24 +57,25 @@ export default function Nav() {
               />
             </div>
             <div className="hidden sm:block">
-              <div className="font-bebas text-xl text-cream tracking-widest leading-none">
-                Evolution
-              </div>
-              <div className="text-[10px] tracking-[0.25em] text-cream/60 uppercase">
-                Production Company
-              </div>
+              <div className="font-bebas text-xl text-cream tracking-widest leading-none">Evolution</div>
+              <div className="text-[10px] tracking-[0.25em] text-cream/60 uppercase">Production Company</div>
             </div>
           </Link>
 
           {/* Desktop links */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-7">
             {links.map((link) => (
               <Link
                 key={link.label}
                 href={link.href}
-                className="text-sm font-dm text-cream/70 hover:text-cream transition-colors duration-200 tracking-wide"
+                className={`relative text-sm font-dm tracking-wide transition-colors duration-200 group ${
+                  isActive(link.href) ? "text-gold" : "text-cream/65 hover:text-cream"
+                }`}
               >
                 {link.label}
+                {isActive(link.href) && (
+                  <span className="absolute -bottom-1 left-0 right-0 h-px bg-gold rounded-full" />
+                )}
               </Link>
             ))}
           </div>
@@ -92,15 +97,9 @@ export default function Nav() {
             aria-label="Toggle menu"
           >
             <div className="space-y-1.5">
-              <span
-                className={`block w-6 h-0.5 bg-cream transition-transform duration-300 ${menuOpen ? "rotate-45 translate-y-2" : ""}`}
-              />
-              <span
-                className={`block w-6 h-0.5 bg-cream transition-opacity duration-300 ${menuOpen ? "opacity-0" : ""}`}
-              />
-              <span
-                className={`block w-6 h-0.5 bg-cream transition-transform duration-300 ${menuOpen ? "-rotate-45 -translate-y-2" : ""}`}
-              />
+              <span className={`block w-6 h-0.5 bg-cream transition-transform duration-300 ${menuOpen ? "rotate-45 translate-y-2" : ""}`} />
+              <span className={`block w-6 h-0.5 bg-cream transition-opacity duration-300 ${menuOpen ? "opacity-0" : ""}`} />
+              <span className={`block w-6 h-0.5 bg-cream transition-transform duration-300 ${menuOpen ? "-rotate-45 -translate-y-2" : ""}`} />
             </div>
           </button>
         </div>
@@ -113,13 +112,15 @@ export default function Nav() {
           animate={{ opacity: 1, y: 0 }}
           className="md:hidden backdrop-blur-md bg-dark/95 border-b border-white/10 px-4 pb-6 pt-2"
         >
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-1">
             {links.map((link) => (
               <Link
                 key={link.label}
                 href={link.href}
                 onClick={() => setMenuOpen(false)}
-                className="text-cream/80 hover:text-cream font-dm text-base py-1"
+                className={`font-dm text-base py-2.5 border-b border-white/5 transition-colors duration-200 ${
+                  isActive(link.href) ? "text-gold" : "text-cream/75 hover:text-cream"
+                }`}
               >
                 {link.label}
               </Link>
@@ -127,7 +128,7 @@ export default function Nav() {
             <Link
               href="/auditions#register"
               onClick={() => setMenuOpen(false)}
-              className="mt-2 px-5 py-3 bg-gold text-dark font-dm font-semibold text-sm rounded-lg text-center"
+              className="mt-4 px-5 py-3 bg-gold text-dark font-dm font-semibold text-sm rounded-lg text-center"
             >
               Apply Now
             </Link>

@@ -56,7 +56,7 @@ export default function About() {
             </FadeUp>
             <FadeUp delay={0.25}>
               <p className="font-dm text-cream/70 text-base leading-relaxed mb-8">
-                Based in the DMV area, EPC runs three full productions per year
+                Based in the Washington DC area, EPC runs three full productions per year
                 with structured training cycles, original choreography, and real
                 career pathways. Our Flex Track develops the next generation
                 from the ground up. Our Junior Company (ages 6–11) and Senior

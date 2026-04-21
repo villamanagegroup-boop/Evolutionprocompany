@@ -6,7 +6,7 @@ import { GROWTH_PHASES } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "About | Evolution Production Company",
   description:
-    "Learn about EPC's founder vision, mission, and the three-phase national growth plan taking this ice-dance company from DMV to the national stage.",
+    "Learn about EPC's founder vision, mission, and the three-phase national growth plan taking this ice-dance company from the Washington DC area to the national stage.",
 };
 
 export default function AboutPage() {
@@ -64,35 +64,29 @@ export default function AboutPage() {
                 </p>
               </div>
             </div>
-            <div className="space-y-6">
-              <div className="p-6 rounded-2xl border border-white/10 bg-white/5">
-                <h3 className="font-bebas text-2xl text-gold tracking-widest mb-3">
-                  OUR MISSION
-                </h3>
-                <p className="font-dm text-cream/70 text-sm leading-relaxed">
-                  To provide a professional-grade performance company for ice
-                  and dance artists in the DMV area and beyond — offering real
-                  training, real productions, and real career pathways for
-                  serious performers at every stage.
+            <div className="space-y-8">
+              <div>
+                <h3 className="font-bebas text-xl text-gold tracking-widest mb-3">OUR MISSION</h3>
+                <p className="font-dm text-cream/65 text-sm leading-relaxed">
+                  To provide a professional-grade performance company for ice and dance artists in the Washington DC area and beyond — offering real training, real productions, and real career pathways for serious performers at every stage.
                 </p>
               </div>
-              <div className="p-6 rounded-2xl border border-white/10 bg-white/5">
-                <h3 className="font-bebas text-2xl text-gold tracking-widest mb-3">
-                  OUR VALUES
-                </h3>
-                <ul className="space-y-2 font-dm text-cream/70 text-sm">
+              <div className="h-px bg-white/8" />
+              <div>
+                <h3 className="font-bebas text-xl text-gold tracking-widest mb-4">OUR VALUES</h3>
+                <div className="space-y-2.5">
                   {[
                     "Excellence over comfort",
                     "Accountability to the craft",
-                    "All members perform — roles are earned through the audition process",
+                    "All members perform — roles are earned",
                     "Growth is mandatory, ego is optional",
                     "The stage is earned, not given",
                   ].map((v) => (
-                    <li key={v} className="flex items-start gap-2">
-                      <span className="text-gold mt-0.5">→</span> {v}
-                    </li>
+                    <p key={v} className="font-dm text-cream/65 text-sm flex items-start gap-2">
+                      <span className="text-gold mt-0.5 flex-shrink-0">→</span> {v}
+                    </p>
                   ))}
-                </ul>
+                </div>
               </div>
             </div>
           </div>
@@ -112,79 +106,48 @@ export default function AboutPage() {
             </h2>
           </div>
 
-          <div className="relative">
-            {/* Timeline line */}
-            <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-purple via-magenta to-red md:-translate-x-px" />
-
-            <div className="space-y-12">
-              {GROWTH_PHASES.map((phase, i) => (
-                <div
-                  key={phase.phase}
-                  className={`relative flex gap-8 md:gap-16 ${i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"}`}
-                >
-                  {/* Dot */}
-                  <div className="absolute left-8 md:left-1/2 w-4 h-4 rounded-full bg-gradient-brand border-2 border-dark -translate-x-1.5 md:-translate-x-2 mt-6" />
-
-                  {/* Card */}
-                  <div
-                    className={`ml-20 md:ml-0 md:w-1/2 ${i % 2 === 0 ? "md:pr-16" : "md:pl-16"}`}
-                  >
-                    <div
-                      className={`p-6 rounded-2xl border bg-white/5 ${
-                        phase.status === "active"
-                          ? "border-gold/40 shadow-[0_0_30px_rgba(245,200,66,0.1)]"
-                          : "border-white/10"
-                      }`}
-                    >
-                      <div className="flex items-center gap-3 mb-3">
-                        <span className="font-bebas text-gold tracking-widest text-lg">
-                          {phase.phase}
-                        </span>
-                        {phase.status === "active" && (
-                          <span className="px-2 py-0.5 rounded-full bg-gold/20 text-gold text-xs font-dm font-semibold tracking-widest uppercase">
-                            Active
-                          </span>
-                        )}
-                      </div>
-                      <h3 className="font-bebas text-3xl text-cream tracking-widest mb-3">
-                        {phase.title}
-                      </h3>
-                      <p className="font-dm text-cream/60 text-sm leading-relaxed">
-                        {phase.description}
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* Spacer for opposite side */}
-                  <div className="hidden md:block md:w-1/2" />
+          <div className="grid md:grid-cols-3 gap-px bg-white/10 rounded-2xl overflow-hidden">
+            {GROWTH_PHASES.map((phase, i) => (
+              <div key={phase.phase} className="bg-dark p-8">
+                <div className="flex items-center gap-3 mb-4">
+                  <span className="font-bebas text-gold tracking-widest text-base">{phase.phase}</span>
+                  {phase.status === "active" && (
+                    <span className="px-2 py-0.5 rounded-full bg-gold/20 text-gold text-xs font-dm font-semibold tracking-widest uppercase">
+                      Active
+                    </span>
+                  )}
                 </div>
-              ))}
-            </div>
+                <div
+                  className="h-px w-8 rounded-full mb-4"
+                  style={{ background: ["#7B2FBE", "#C2185B", "#E8334A"][i] }}
+                />
+                <h3 className="font-bebas text-2xl text-cream tracking-widest mb-3">
+                  {phase.title}
+                </h3>
+                <p className="font-dm text-cream/60 text-sm leading-relaxed">
+                  {phase.description}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* As EPC Grows */}
       <section className="py-20 border-t border-white/10">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="font-cormorant italic text-gold text-lg tracking-widest mb-4">
-            Looking Ahead
-          </p>
-          <h2 className="font-bebas text-4xl md:text-5xl text-cream tracking-widest mb-6">
-            AS EPC <span className="text-gradient">GROWS</span>
-          </h2>
-          <p className="font-dm text-cream/65 text-base leading-relaxed mb-8">
-            As Evolution Production Company continues to grow, members may also gain access to expanded
-            experiences such as special trips, industry events, company retreats, exclusive workshops,
-            and unique performance opportunities. Our goal is to build a company experience that is
-            inspiring, professional, and rewarding at every level.
-          </p>
-          <div className="flex flex-wrap justify-center gap-3">
-            {["Special Trips", "Industry Events", "Company Retreats", "Exclusive Workshops", "Unique Performance Opportunities"].map((item) => (
-              <span key={item} className="px-4 py-2 rounded-full border border-white/15 bg-white/5 font-dm text-cream/60 text-sm">
-                {item}
-              </span>
-            ))}
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="relative overflow-hidden rounded-2xl p-10 md:p-14 text-center">
+            <div className="absolute inset-0 bg-gradient-brand opacity-90" />
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(255,255,255,0.12)_0%,_transparent_70%)]" />
+            <div className="relative z-10">
+              <p className="font-cormorant italic text-cream/80 text-xl mb-3">Looking Ahead</p>
+              <h2 className="font-bebas text-4xl md:text-5xl text-cream tracking-widest mb-5">
+                THE VISION IS NATIONAL
+              </h2>
+              <p className="font-dm text-cream/80 text-base leading-relaxed max-w-2xl mx-auto">
+                Phase 1 is Washington DC. Phase 3 is everywhere. As EPC grows, members gain access to expanded touring, industry events, company retreats, and performance opportunities that don&apos;t exist anywhere else. The ground floor is where the story starts.
+              </p>
+            </div>
           </div>
         </div>
       </section>

@@ -27,7 +27,7 @@ export default function AuditionsPage() {
           <h1 className="font-bebas text-6xl md:text-8xl text-cream tracking-widest leading-none mb-6">
             AUDITIONS
             <br />
-            <span className="text-gradient">COMING TO DMV</span>
+            <span className="text-gradient">COMING TO WASHINGTON DC</span>
           </h1>
           <p className="font-dm text-cream/60 text-base md:text-lg max-w-2xl mx-auto">
             Evolution Production Company is actively building its founding
@@ -69,19 +69,17 @@ export default function AuditionsPage() {
                 to a positive company culture.
               </p>
             </div>
-            <div className="space-y-3">
+            <div className="space-y-3 font-dm text-cream/65 text-base leading-relaxed">
               {[
                 "Skaters and dancers at any experience level",
-                "Performers who want more stage time",
-                "Artists looking for original, creative productions",
-                "Those who value community and collaboration",
-                "Performers committed to growth and professionalism",
-                "Anyone who wants to be part of something new",
+                "Performers who want more stage time and original productions",
+                "Artists who value community, collaboration, and growth",
+                "Anyone ready to commit to something new",
               ].map((item) => (
-                <div key={item} className="flex items-start gap-3 p-4 rounded-xl border border-white/10 bg-white/5">
-                  <span className="text-gold font-bebas text-lg leading-none mt-0.5">→</span>
-                  <p className="font-dm text-cream/70 text-sm">{item}</p>
-                </div>
+                <p key={item} className="flex items-start gap-2">
+                  <span className="text-gold flex-shrink-0 mt-0.5">→</span>
+                  {item}
+                </p>
               ))}
             </div>
           </div>
@@ -135,81 +133,40 @@ export default function AuditionsPage() {
         </div>
       </section>
 
-      {/* What to prepare */}
+      {/* What to expect */}
       <section className="py-20 border-t border-white/10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-16">
-            <div>
-              <h2 className="font-bebas text-4xl text-cream tracking-widest mb-8">
-                WHAT TO <span className="text-gradient">PREPARE</span>
-              </h2>
-              <div className="space-y-4">
-                {[
-                  {
-                    step: "01",
-                    title: "Solo Performance",
-                    body: "A solo is required only for performers seeking principal role consideration. Juniors: 60 seconds. Seniors: 90 seconds. All other performers do not need to prepare a solo — bring your current skill level and readiness.",
-                  },
-                  {
-                    step: "02",
-                    title: "Training Attire",
-                    body: "Skaters: bring your own skates and appropriate training attire. Dancers: dress for movement. No costumes required.",
-                  },
-                  {
-                    step: "03",
-                    title: "Music",
-                    body: "Bring your music on a phone or device with an audio jack or Bluetooth capability. MP3 preferred.",
-                  },
-                  {
-                    step: "04",
-                    title: "Mindset",
-                    body: "We are looking for coachability, stage presence, and commitment — not perfection. Come ready to take direction.",
-                  },
-                  {
-                    step: "05",
-                    title: "Video Auditions",
-                    body: "Can't make it in person? Performers may submit a video audition. If submitting for principal consideration, include your solo. Film in a well-lit space with clear audio. Video submissions are reviewed on a rolling basis — contact us for submission details.",
-                  },
-                ].map((item) => (
-                  <div key={item.step} className="flex gap-4">
-                    <div className="font-bebas text-3xl text-gradient leading-none pt-1 min-w-[2rem]">
-                      {item.step}
-                    </div>
-                    <div>
-                      <h4 className="font-bebas text-xl text-cream tracking-widest mb-1">
-                        {item.title}
-                      </h4>
-                      <p className="font-dm text-cream/60 text-sm leading-relaxed">
-                        {item.body}
-                      </p>
-                    </div>
-                  </div>
-                ))}
+          <h2 className="font-bebas text-4xl text-cream tracking-widest mb-10">
+            WHAT TO <span className="text-gradient">EXPECT</span>
+          </h2>
+          <div className="grid md:grid-cols-2 gap-10">
+            <div className="space-y-6">
+              <div>
+                <h4 className="font-bebas text-xl text-cream tracking-widest mb-1">Come Prepared</h4>
+                <p className="font-dm text-cream/60 text-sm leading-relaxed">
+                  Bring your skates or dance attire and your music on a phone or device. A solo (60–90 sec) is only required if you&apos;re seeking a principal role — all other performers just bring their current skill level and readiness.
+                </p>
+              </div>
+              <div>
+                <h4 className="font-bebas text-xl text-cream tracking-widest mb-1">Mindset Matters Most</h4>
+                <p className="font-dm text-cream/60 text-sm leading-relaxed">
+                  We&apos;re looking for coachability, stage presence, and commitment — not perfection. Come ready to take direction and work as part of a company.
+                </p>
+              </div>
+              <div>
+                <h4 className="font-bebas text-xl text-cream tracking-widest mb-1">Can&apos;t Make It In Person?</h4>
+                <p className="font-dm text-cream/60 text-sm leading-relaxed">
+                  Video auditions are accepted on a rolling basis. Film in a well-lit space with clear audio and contact us for submission details.
+                </p>
               </div>
             </div>
-
             <div>
-              <h2 className="font-bebas text-4xl text-cream tracking-widest mb-8">
-                WHAT WE <span className="text-gradient">LOOK FOR</span>
-              </h2>
-              <div className="space-y-3">
-                {[
-                  "Technical foundation in your primary discipline",
-                  "Stage presence and performance quality",
-                  "Ability to take and apply direction quickly",
-                  "Physical conditioning and stamina",
-                  "Professionalism and attitude",
-                  "Commitment to the full season",
-                  "Team mentality — EPC is a company, not a solo act",
-                ].map((item) => (
-                  <div
-                    key={item}
-                    className="flex items-start gap-3 p-3 rounded-lg border border-white/5 bg-white/3 font-dm text-cream/70 text-sm"
-                  >
-                    <span className="text-gold">→</span>
-                    {item}
-                  </div>
-                ))}
+              <h4 className="font-bebas text-xl text-cream tracking-widest mb-4">What We Look For</h4>
+              <div className="space-y-2 font-dm text-cream/65 text-sm leading-relaxed">
+                <p>→ Technical foundation in your primary discipline</p>
+                <p>→ Stage presence and ability to hold an audience</p>
+                <p>→ Coachability — takes and applies direction quickly</p>
+                <p>→ Full-season commitment and team mentality</p>
               </div>
             </div>
           </div>

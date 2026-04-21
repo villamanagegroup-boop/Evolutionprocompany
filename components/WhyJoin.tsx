@@ -106,7 +106,7 @@ export default function WhyJoin() {
                 <FadeUp key={item.title} delay={i * 0.12}>
                   <div className="flex gap-5 items-start">
                     {/* Big visible number */}
-                    <div className="flex-shrink-0 font-bebas text-7xl leading-none text-gradient select-none w-14 text-right">
+                    <div className="flex-shrink-0 font-bebas text-5xl md:text-7xl leading-none text-gradient select-none w-10 md:w-14 text-right">
                       0{i + 1}
                     </div>
                     <div className="flex-1 pt-1">

@@ -8,7 +8,7 @@ import { SHOWS } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Shows | Evolution Production Company",
   description:
-    "Three productions per year — Ignite, Ascend, and Illuminate. Explore EPC's full season of professional ice and dance performances in the DMV area.",
+    "Three productions per year — Ignite, Ascend, and Illuminate. Explore EPC's full season of professional ice and dance performances in the Washington DC area.",
 };
 
 const SHOW_IMAGES = [

@@ -11,44 +11,6 @@ export const metadata: Metadata = {
     "Partner with Evolution Production Company. Rink partners, corporate sponsors, media, community, and more — grow with EPC from the ground floor.",
 };
 
-const additionalPartnerTypes = [
-  {
-    title: "Media Partners",
-    description:
-      "Local TV stations, digital media outlets, lifestyle brands, and content creators who want early access to EPC productions, rehearsals, and artist stories. In return: logo placement, press access, and co-branded content.",
-    color: "#7B2FBE",
-  },
-  {
-    title: "School & Youth Program Partners",
-    description:
-      "After-school programs, performing arts schools, and youth organizations that want to pipeline young talent into structured professional training. EPC can serve as the performance destination for your students.",
-    color: "#C2185B",
-  },
-  {
-    title: "Hospitality Partners",
-    description:
-      "Hotels, restaurants, and entertainment venues near EPC production locations. Package deals, cross-promotion, and audience capture for businesses that benefit when EPC fills a house.",
-    color: "#E8334A",
-  },
-  {
-    title: "Apparel & Merchandise Partners",
-    description:
-      "Brands interested in co-designing company apparel, production merchandise, or performance gear. Your product in front of live audiences — worn by the talent on and off the ice.",
-    color: "#7B2FBE",
-  },
-  {
-    title: "Technology & Platform Partners",
-    description:
-      "Ticketing platforms, streaming services, production tech companies, and digital tools that want to power EPC's growth. Early-stage technology partners grow their footprint as EPC scales nationally.",
-    color: "#C2185B",
-  },
-  {
-    title: "Community Organization Partners",
-    description:
-      "DMV arts nonprofits, cultural organizations, and community groups aligned with performing arts, youth development, or diversity in entertainment. Joint programming, shared audiences, and mission-aligned impact.",
-    color: "#E8334A",
-  },
-];
 
 export default function PartnershipsPage() {
   return (
@@ -64,13 +26,13 @@ export default function PartnershipsPage() {
             <p className="font-cormorant italic text-gold text-lg tracking-widest mb-4">
               Partnership Opportunities
             </p>
-            <h1 className="font-bebas text-7xl md:text-[96px] text-cream tracking-widest leading-none mb-6">
+            <h1 className="font-bebas text-5xl sm:text-6xl md:text-7xl lg:text-[96px] text-cream tracking-widest leading-none mb-6">
               GROW WITH
               <br />
               <span className="text-gradient">EPC</span>
             </h1>
             <p className="font-dm text-cream/70 text-lg leading-relaxed max-w-2xl mb-6">
-              Evolution Production Company is building something the DMV has
+              Evolution Production Company is building something the Washington DC area has
               never seen — a professional hybrid ice and dance production company
               with three live shows a year and a clear path to national reach.
             </p>
@@ -90,7 +52,7 @@ export default function PartnershipsPage() {
             <div className="h-px flex-1 bg-white/10" />
           </div>
           <p className="font-dm text-cream/60 text-sm leading-relaxed max-w-2xl mb-10 ml-6">
-            EPC is actively seeking official partner rinks in the DMV area. If you
+            EPC is actively seeking official partner rinks in the Washington DC area. If you
             operate an ice facility, a partnership means recurring revenue through
             rehearsal blocks, co-hosted productions, and direct alignment with a
             serious and growing performer community.
@@ -184,35 +146,14 @@ export default function PartnershipsPage() {
       {/* Additional partnership types */}
       <section className="py-20 border-t border-white/10">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center gap-4 mb-4">
+          <div className="flex items-center gap-4 mb-6">
             <div className="w-1.5 h-8 rounded-full bg-red flex-shrink-0" />
             <h2 className="font-bebas text-4xl text-cream tracking-widest">MORE WAYS TO PARTNER</h2>
             <div className="h-px flex-1 bg-white/10" />
           </div>
-          <p className="font-dm text-cream/60 text-sm leading-relaxed max-w-2xl mb-10 ml-6">
-            We think broadly about partnership. If your organization touches
-            performance, youth, media, or community — there&apos;s a way to align with EPC.
+          <p className="font-dm text-cream/65 text-base leading-relaxed max-w-2xl ml-6">
+            We also work with media outlets, schools and youth programs, hospitality brands, apparel and merchandise companies, technology platforms, and community organizations. If your work touches performance, youth, or the arts — there&apos;s likely a way to align with EPC. Use the form below and tell us what you have in mind.
           </p>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {additionalPartnerTypes.map((type) => (
-              <div
-                key={type.title}
-                className="p-6 rounded-2xl border border-white/10 bg-white/5 hover:border-white/20 transition-all duration-200"
-              >
-                <div
-                  className="inline-block h-0.5 w-8 rounded-full mb-3"
-                  style={{ background: type.color }}
-                />
-                <h4 className="font-bebas text-xl text-cream tracking-widest mb-2">
-                  {type.title}
-                </h4>
-                <p className="font-dm text-cream/55 text-xs leading-relaxed">
-                  {type.description}
-                </p>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 
@@ -230,9 +171,7 @@ export default function PartnershipsPage() {
                 TELL US WHAT YOU HAVE IN MIND
               </h3>
               <p className="font-dm text-cream/70 text-base max-w-lg mx-auto">
-                Every partnership we build is custom. Use the form below to
-                tell us about your organization and vision — we&apos;ll take it
-                from there.
+                Every partnership we build is custom. Click below to tell us about your organization and vision — we&apos;ll take it from there.
               </p>
             </div>
           </div>
