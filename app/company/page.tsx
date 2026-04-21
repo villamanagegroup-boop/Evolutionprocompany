@@ -122,31 +122,6 @@ const curriculum = [
   },
 ];
 
-const skaterSchedule = [
-  {
-    session: "On-Ice Session",
-    focus: "Ice Training",
-    details: "Weekly on-ice session covering choreography, technical elements, ensemble work, and crossover staging with dancers",
-  },
-  {
-    session: "Off-Ice Session",
-    focus: "Off-Ice Training",
-    details: "Weekly off-ice session covering conditioning, acting, flexibility, and movement quality development",
-  },
-];
-
-const dancerSchedule = [
-  {
-    session: "Studio Session",
-    focus: "Dance Training",
-    details: "Weekly studio session covering choreography, staging, and performance work in your primary discipline",
-  },
-  {
-    session: "Ice Session",
-    focus: "Combined Choreography",
-    details: "Weekly ice session for combined performance choreography — dancers and skaters rehearse crossover sequences and full-company staging together",
-  },
-];
 
 const productionCycle = [
   { months: "Jan – Mar", show: "Spring Production", perform: "April" },
